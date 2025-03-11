@@ -24,20 +24,20 @@ main {
 
 .slider {
   position: relative;
-  display: flex;
   width: 100%;
   height: 100%;
   transition: transform 0.5s ease-in-out;
 }
 
 .item {
-  flex: 0 0 100%;
+  width: 100%;
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-size: cover;
-  background-position: center;
+  background-size: cover; /* Ensures the image fully covers */
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat; /* Prevents repetition */
   position: absolute;
   transition: opacity 0.5s ease-in-out;
 }
@@ -80,10 +80,11 @@ button:hover {
   cursor: pointer;
   font-size: 20px;
   transition: 0.3s;
+  border-radius: 50%;
 }
 
-.prev { left: 10px; }
-.next { right: 10px; }
+.prev { left: 10px; margin-top: 25px; }
+.next { right: 10px; margin-top: 25px; }
 
 .prev:hover, .next:hover {
   background: rgba(0, 0, 0, 0.8);
